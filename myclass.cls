@@ -12,7 +12,8 @@ parskip=half-,twocolumn,numbers=noenddot]{scrreprt}
   \makeindex
 \RequirePackage{xcolor}
 \RequirePackage{amsmath,amssymb}
-\RequirePackage{tikz,adjustbox}
+\RequirePackage{tikz}
+\RequirePackage{adjustbox}
   \usetikzlibrary{positioning}
   \usetikzlibrary{decorations.text}
   \usetikzlibrary{decorations.pathmorphing}
@@ -380,7 +381,8 @@ left=2.75cm,right=2.75cm
 \raggedleft % Right-align all text
 \vfil
 \phantom{.}\hfill 
-\includegraphics[width=0.225\paperwidth,keepaspectratio]{GrattanSVGLogo}
+% for travis
+%\includegraphics[width=0.225\paperwidth,keepaspectratio]{GrattanSVGLogo}
 \vspace{30pt}
 \vfil % Whitespace at the top of the page
 
@@ -414,7 +416,7 @@ left=2.75cm,right=2.75cm
 		\centering
 		% Amend
 		\IfFileExists{./FrontPage/FrontPage.pdf}{%
-			\includegraphics[width=\paperwidth,keepaspectratio]{./FrontPage/FrontPage.pdf}%
+			%\includegraphics[width=\paperwidth,keepaspectratio]{./FrontPage/FrontPage.pdf}%
 		}{
 			\ClassError{grattanAlpha}{%
 				'./FrontPage/FrontPage' does not exist
@@ -489,16 +491,16 @@ left=2.75cm,right=2.75cm
   \vspace{-5pt} 
   {\centering  
   
-  {\includegraphics[width=3.75cm]{aus-gov-logo-stacked-black}}
+  %{\includegraphics[width=3.75cm]{aus-gov-logo-stacked-black}}
   
-  {\includegraphics[width=3.25cm]{Vic_Gov_Logo-2016}}
+  %{\includegraphics[width=3.25cm]{Vic_Gov_Logo-2016}}
   
   % Too much whitespace on top:
   % l t r b
-  {\includegraphics[trim = {0 2cm 0 2cm}, clip, width=3.5cm]{UOM-Pos_S_PMS}}
+  %{\includegraphics[trim = {0 2cm 0 2cm}, clip, width=3.5cm]{UOM-Pos_S_PMS}}
   
   % Bhp original a little too much whitespace on bottom:
-  {\includegraphics[trim = {0 3.8cm 0 0}, clip, width=3.5cm]{Bhp}}
+  %{\includegraphics[trim = {0 3.8cm 0 0}, clip, width=3.5cm]{Bhp}}
   }
   \columnbreak\par
   \textbf{\textcolor{theGrey}{\normalsize Affiliate Partners}}
