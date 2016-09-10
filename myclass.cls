@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{grattanWorkingPaperAugust2016}[2016/08/27 Working papers of the Grattan Institute, Melbourne]
+\ProvidesClass{myclass}
 
 \LoadClass[a4paper,11pt,titlepage,headings=big,chapterprefix=false,headsepline,
 parskip=half-,twocolumn,numbers=noenddot]{scrreprt}
