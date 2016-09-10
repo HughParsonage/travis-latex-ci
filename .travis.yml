@@ -1,14 +1,18 @@
-before_install:
-- sudo apt-get update -qq
-- sudo apt-get install texlive-latex-extra
+install:
+ - source ./support/texlive.sh
+
+cache:
+  directories:
+    - /tmp/texlive
+    - $HOME/.texlive
+
 script:
-- mkdir build
-- pdflatex -output-directory build Example.tex
-deploy:
-  provider: releases
-  api_key:
-    secure: qSuV4KvbmDgRoZIvaYgDlt2G7wby9m5fwzpyAwHtH6st+qoRcloHtAb4GgYAsUr7I9VTWYhN78LfR4Ode5vjn0AsArjHDTSOmvFhMtawnYXqEGvfhb5LBPRqLM4x2K21kMHxmBz01CpabV9kb5h6N5p2Ljs+ApUCdtXVFNEY+GDU2GpKU7Zxr27KHGSDFl9XTUF8V2rloTGkB5rwATnDpHDtaWph5Ncp9TCblaMc98NH5p5kD4LgJGCWT1VzDjXgjG7D7m+rgDVGKDQKSehVR5lAHbSSfHgc5erBnj3F26rAefiKwyqgkQ/M+f2WiE9rgq6rt3TpxTPLaSaSdFE9/FVJFfaZtJ5mD1ZbO3EZFC3ofQYpQDFQ1FXTUT/QLIJ0BYaHOTjL4QndqMAgXWFRgRkaZ+ujIgjSP4wQSmdeY/qdIDNCGV4oOBUILDSC4E1cQAb8oI3R9AHdfTMSQpcCEasLuhiAEQ/OQl+n86aqs9Zh8AXjaAkV8CmdYrSnAt+K8HlOtHlBdBpEyKlboj+bJgst0ffMs3nYG9ire8D2KgID9WZT5AT/pGRQxe89Wm0oN6lM2Nf1SrSOQ82fo+RiT8pCFxG0WkHQxa1g2FLzEaO2f1VEWP+asmi+4VDwGwhai9h3K/gFv2RwXKBL0sBhgpkZ1JcwgHzGimggUMfl/h4=
-  file: Example.pdf
-  skip_cleanup: true
-  on:
-    repo: HughParsonage/travis-latex-ci
+ - pdflatex Example.tex
+ 
+notifications:
+  email:
+    recipients:
+      - hugh.parsonage+travisrepo@gmail.com
+    on_success: change
+    on_failure: always
+    on_start:   never
