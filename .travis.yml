@@ -1,22 +1,18 @@
-sudo: true
-  
+language: r
+
+sudo: false
+cache: packages
+warnings_are_errors: false
+
+
 before_install:
- - sudo apt-get install -y texlive
-  
-install: true
+  - tlmgr install standalone showexpl imakeidx xpatch
 
-cache:
-  directories:
-    - /tmp/texlive
-    - $HOME/.texlive
+install: echo Installation step #do not remove this line!
 
-script:
- - pdflatex Example.tex
- 
+script: make manual-git
+
+after_success: tools/deploy.sh
+
 notifications:
-  email:
-    recipients:
-      - hugh.parsonage+travisrepo@gmail.com
-    on_success: change
-    on_failure: always
-    on_start:   never
+  email: false
