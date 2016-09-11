@@ -6,7 +6,8 @@ warnings_are_errors: false
 
 
 before_install:
-  - tlmgr install acronym chngcntr cmap nowidow mdframed navigator tablefootnote tocloft
+  - tlmgr install acronym chngcntr cmap nowidow mdframed navigator tablefootnote tocloft xpatch
+  - tlmgr update --all
 
 install: echo Installation step #do not remove this line!
 
