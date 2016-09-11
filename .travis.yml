@@ -10,7 +10,7 @@ before_install:
 
 install: echo Installation step #do not remove this line!
 
-script: make manual-git
+script: pdflatex Example.tex
 
 after_success: tools/deploy.sh
 
