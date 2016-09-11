@@ -6,8 +6,7 @@ warnings_are_errors: false
 
 
 before_install:
-  - tlmgr install standalone showexpl imakeidx xpatch cmap scrhack acronym makeidx xcolor tikz adjustbox float placeins afterpage colortbl array tablefootnote graphicx booktabs nowidow inputenc fontenc lmodern uarial helvet mdframed newfloat caption varioref navigator cleveref chngcntr etoolbox ragged2e eso-pic multicol babel csquotes tocloft
-
+  - tlmgr install acronym chngcntr cmap nowidow mdframed navigator tablefootnote tocloft
 
 install: echo Installation step #do not remove this line!
 
