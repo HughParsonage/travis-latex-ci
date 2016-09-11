@@ -6,7 +6,8 @@ warnings_are_errors: false
 
 
 before_install:
-  - tlmgr install standalone showexpl imakeidx xpatch cmap 
+  - tlmgr install standalone showexpl imakeidx xpatch cmap scrhack acronym makeidx xcolor tikz adjustbox float placeins afterpage colortbl array tablefootnote % for footnotes within tables graphicx booktabs \RequirePackage[all]{nowidow \RequirePackage[utf8]{inputenc \RequirePackage[T1]{fontenc lmodern %uarial \RequirePackage[scaled]{helvet \RequirePackage[framemethod=TikZ]{mdframed newfloat caption varioref % navigator cleveref chngcntr etoolbox ragged2e eso-pic multicol \RequirePackage[english]{babel csquotes tocloft
+
 
 install: echo Installation step #do not remove this line!
 
