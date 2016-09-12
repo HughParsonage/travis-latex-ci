@@ -11,7 +11,11 @@ before_install:
 
 install: echo Installation step #do not remove this line!
 
-script: pdflatex Example.tex
+script: 
+  - Rscript -e "knitr::knit('Example.Rnw')"
+  - pdflatex -draftmode Example.tex
+  - biber Example
+  - pdflatex -draftmode Example.tex
 
 after_success: tools/deploy.sh
 

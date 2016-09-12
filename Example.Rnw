@@ -1,0 +1,24 @@
+\documentclass{myclass}
+
+\title{(my title)}
+\Subtitle{my subtitle}
+\author{me}
+
+\GrattanWorkingPaperNumber{x}
+\acknowledgements{a}
+
+\addbibresource{bib/bibliography.bib}
+
+\usepackage{blindtext}
+
+\begin{document}
+\textcite{McCrann-scott-morrison-super-changes-big-positive-deal}
+<<test>>=
+x <- 0
+@
+
+\blinddocument 
+
+\printbibliography
+
+\end{document}
