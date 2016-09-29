@@ -1,11 +1,15 @@
 language: r
 
 sudo: true
-cache: packages
+cache: 
+  - packages
+  - /tmp/texlive
+  - /$HOME/.texlive
 warnings_are_errors: false
 
 
 before_install:
+  - source ./source/texlive.sh
   - tlmgr install acronym bigfoot blindtext chngcntr cmap nowidow mdframed navigator needspace tablefootnote tocloft xpatch
   - tlmgr update --all
   - sudo apt-get update
