@@ -14,7 +14,6 @@ before_install:
   - tlmgr update --all
   - sudo apt-get update
   - sudo apt-get install texlive-bibtex-extra
-  - tlmgr biber
   - Rscript -e "if (!requireNamespace('knitr')) install.packages('knitr')"
 
 install: echo Installation step #do not remove this line!
