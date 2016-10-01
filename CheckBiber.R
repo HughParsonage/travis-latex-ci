@@ -1,2 +1,2 @@
-if (any(grepl("WARN", readLines("Better-targeting-super-breaks.blg"))))
+if (any(grepl("WARN", readLines("Example.blg"))))
   stop("biber emitted warnings.")
