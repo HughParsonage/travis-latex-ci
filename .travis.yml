@@ -30,6 +30,7 @@ script:
   - Rscript -e "knitr::knit('Example.Rnw')"
   - pdflatex -draftmode Example.tex
   - biber Example
+  - Rscript CheckBiber.R
   - pdflatex -draftmode Example.tex
 
 after_success: tools/deploy.sh
